@@ -1,6 +1,7 @@
 # 🚢 AI-Powered RUL Prediction for Port Infrastructure
 > Predicting Remaining Useful Life (RUL) using CMAPSS sensor data, LSTM networks, and a FastAPI-powered inference system.
 
+---
 
 ## 📘 Abstract
 
@@ -12,6 +13,7 @@ The workflow includes preprocessing the time-series data, training models, track
 
 This project is a proof of concept for how predictive maintenance can be implemented using real-world-like sensor data, with a focus on reliable model tracking, clean API deployment, and modular design — potentially applicable to port equipment where similar degradation patterns occur.
 
+---
 
 ## 📊 Dataset
 
@@ -47,6 +49,21 @@ NASA Prognostics Center of Excellence:
 [https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data](https://data.nasa.gov/dataset/cmapss-jet-engine-simulated-data)
 
 ---
+
+## ❗ Problem Statement
+
+The objective of this project is to develop a system that predicts the **Remaining Useful Life (RUL)** of industrial machinery based on historical sensor data. Accurate RUL estimation enables predictive maintenance — helping minimize unplanned downtime and reduce maintenance costs.
+
+We simulate this scenario using the **FD001 subset** from the NASA CMAPSS dataset, which provides multivariate time-series sensor data for engines operating under a single condition and degrading due to a single fault type. The task is to estimate, for each engine, how many cycles remain before failure based on its sensor behavior up to a given point.
+
+This is framed as a **regression problem**, where the model predicts the number of remaining cycles. Two approaches are explored:
+- A baseline using **Random Forest** for tabular RUL prediction
+- A deep learning model using **LSTM** for capturing temporal degradation patterns
+
+The final model is served through a **FastAPI-based REST API** for inference, and all experiments are tracked using **MLflow**. The entire solution is containerized using **Docker** for easy local or cloud deployment.
+
+This project serves as a **proof-of-concept** for predictive maintenance solutions that could later be adapted to real-world port equipment when similar time-series sensor data is available.
+
 
 
 
