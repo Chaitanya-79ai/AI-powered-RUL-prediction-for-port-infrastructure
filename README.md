@@ -1,11 +1,14 @@
 # 🚢 AI-Powered RUL Prediction for Port Infrastructure
 > Predicting Remaining Useful Life (RUL) using CMAPSS sensor data, LSTM networks, and a FastAPI-powered inference system.
 >
-> ## 📘 Overview
+> ## 📘 Abstract
 
-Modern ports rely heavily on complex machinery like cranes, RTGs, and other heavy equipment that must operate with minimal downtime. Unexpected breakdowns not only delay operations but also incur significant maintenance costs. This project presents an AI-powered predictive maintenance system that forecasts equipment failure in advance by predicting the Remaining Useful Life (RUL) of machines using sensor data.
+Port equipment like cranes and heavy machinery undergo gradual wear and can fail unexpectedly if not monitored properly. This project builds a predictive maintenance system that estimates the Remaining Useful Life (RUL) of such machinery using time-series sensor data.
 
-Leveraging the NASA CMAPSS FD001 dataset — a widely used benchmark for time-series degradation modeling — this system processes multivariate sensor data, learns degradation patterns through Long Short-Term Memory (LSTM) networks, and serves real-time RUL predictions through a FastAPI-based REST API. The entire pipeline is experiment-tracked via MLflow and containerized using Docker for easy deployment in cloud or edge environments.
+We use the NASA CMAPSS FD001 dataset, which simulates sensor readings from aircraft engines operating under a single consistent condition and fault mode. The system learns degradation trends using both traditional machine learning (Random Forest) and deep learning models (LSTM). The model outputs RUL estimates based on historical sensor behavior.
 
-This project showcases how machine learning and modern MLOps tools can be integrated into a robust solution to reduce maintenance costs, improve asset longevity, and ensure smoother operations in high-throughput port environments.
+The workflow includes preprocessing the time-series data, training models, tracking experiments using MLflow, and exposing the final model via a FastAPI-based REST API. The entire solution is containerized using Docker, making it ready for cloud or local deployment.
+
+This project is a proof of concept for how predictive maintenance can be implemented using real-world-like sensor data, with a focus on reliable model tracking, clean API deployment, and modular design — potentially applicable to port equipment where similar degradation patterns occur.
+
 
