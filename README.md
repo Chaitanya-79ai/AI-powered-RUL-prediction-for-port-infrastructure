@@ -112,18 +112,7 @@ The end-to-end predictive maintenance pipeline consists of the following stages:
 
 ###  Pipeline Diagram
 
-```mermaid
-graph TD
-    A[Raw CMAPSS FD001 Data] --> B[Data Preprocessing]
-    B --> C[Feature Engineering]
-    C --> D1[Random Forest Model]
-    C --> D2[LSTM Model]
-    D1 & D2 --> E[MLflow Tracking]
-    D2 --> F[FastAPI Inference Server]
-    F --> G[Docker Container]
-
-
----
+<pre><code>```mermaid graph TD A[Raw CMAPSS FD001 Data] --> B[Data Preprocessing] B --> C[Feature Engineering] C --> D1[Random Forest Model] C --> D2[LSTM Model] D1 & D2 --> E[MLflow Tracking] D2 --> F[FastAPI Inference Server] F --> G[Docker Container] G --> H[Deployment (Local / Cloud)] ```</code></pre>
 
 
 
