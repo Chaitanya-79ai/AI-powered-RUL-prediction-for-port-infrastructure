@@ -50,7 +50,7 @@ NASA Prognostics Center of Excellence:
 
 ---
 
-## ❗ Problem Statement
+##  Problem Statement
 
 The objective of this project is to develop a system that predicts the **Remaining Useful Life (RUL)** of industrial machinery based on historical sensor data. Accurate RUL estimation enables predictive maintenance — helping minimize unplanned downtime and reduce maintenance costs.
 
@@ -59,10 +59,6 @@ We simulate this scenario using the **FD001 subset** from the NASA CMAPSS datase
 This is framed as a **regression problem**, where the model predicts the number of remaining cycles. Two approaches are explored:
 - A baseline using **Random Forest** for tabular RUL prediction
 - A deep learning model using **LSTM** for capturing temporal degradation patterns
-
-The final model is served through a **FastAPI-based REST API** for inference, and all experiments are tracked using **MLflow**. The entire solution is containerized using **Docker** for easy local or cloud deployment.
-
-This project serves as a **proof-of-concept** for predictive maintenance solutions that could later be adapted to real-world port equipment when similar time-series sensor data is available.
 
 
 
