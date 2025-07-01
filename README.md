@@ -60,6 +60,31 @@ This is framed as a **regression problem**, where the model predicts the number 
 - A baseline using **Random Forest** for tabular RUL prediction
 - A deep learning model using **LSTM** for capturing temporal degradation patterns
 
+---
+
+## 🛠️ Tech Stack
+
+This project uses the following technologies and tools:
+
+### 👨‍💻 Programming & Libraries
+- **Python** – Core programming language
+- **NumPy & pandas** – Data manipulation and feature engineering
+- **scikit-learn** – Traditional machine learning (Random Forest)
+- **TensorFlow / Keras** – Deep learning (LSTM model)
+- **Matplotlib & Seaborn** – Visualization
+
+### ⚙️ Model Management & Tracking
+- **MLflow** – Experiment tracking, model versioning, and logging
+
+### 🌐 API Development
+- **FastAPI** – Building and testing REST endpoints for model inference
+
+### 📦 Packaging & Deployment
+- **Docker** – Containerization of the API for deployment
+
+---
+
+
 
 
 
