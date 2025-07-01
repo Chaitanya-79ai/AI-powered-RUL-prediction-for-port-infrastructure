@@ -110,8 +110,6 @@ The end-to-end predictive maintenance pipeline consists of the following stages:
 
 ---
 
-<pre><code>## 📁 Project Structure ``` predictive-maintenance/ │ ├── data/ │ ├── train_FD001.txt │ ├── test_FD001.txt │ └── RUL_FD001.txt │ ├── src/ │ ├── config.py │ ├── data_preprocessing.py │ ├── model.py │ └── utils.py │ ├── api/ │ ├── main.py │ └── inference.py │ ├── mlruns/ │ ├── Dockerfile ├── requirements.txt ├── .gitignore └── README.md ``` </code></pre>
-
 
 
 
