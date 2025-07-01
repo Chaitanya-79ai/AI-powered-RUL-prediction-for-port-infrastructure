@@ -110,9 +110,7 @@ The end-to-end predictive maintenance pipeline consists of the following stages:
 
 ---
 
-## Project Structure
-
-<pre><code>## 📁 Project Structure ``` predictive-maintenance/ │ ├── data/ # CMAPSS dataset files (FD001) │ ├── train_FD001.txt │ ├── test_FD001.txt │ └── RUL_FD001.txt │ ├── src/ # Core ML pipeline code │ ├── config.py # Configuration variables │ ├── data_preprocessing.py # Data loading and preprocessing │ ├── model.py # LSTM and Random Forest models │ └── utils.py # Helper functions │ ├── api/ # FastAPI app │ ├── main.py # API entry point │ └── inference.py # Inference logic using trained model │ ├── mlruns/ # MLflow tracking artifacts (auto-generated) │ ├── Dockerfile # Docker container configuration ├── requirements.txt # Python dependencies ├── .gitignore # Files and folders to ignore in Git └── README.md # Project overview and documentation ``` </code></pre>
+<pre><code>## 📁 Project Structure ``` predictive-maintenance/ │ ├── data/ │ ├── train_FD001.txt │ ├── test_FD001.txt │ └── RUL_FD001.txt │ ├── src/ │ ├── config.py │ ├── data_preprocessing.py │ ├── model.py │ └── utils.py │ ├── api/ │ ├── main.py │ └── inference.py │ ├── mlruns/ │ ├── Dockerfile ├── requirements.txt ├── .gitignore └── README.md ``` </code></pre>
 
 
 
