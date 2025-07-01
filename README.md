@@ -11,8 +11,6 @@ We use the NASA CMAPSS FD001 dataset, which simulates sensor readings from aircr
 
 The workflow includes preprocessing the time-series data, training models, tracking experiments using MLflow, and exposing the final model via a FastAPI-based REST API. The entire solution is containerized using Docker, making it ready for cloud or local deployment.
 
-This project is a proof of concept for how predictive maintenance can be implemented using real-world-like sensor data, with a focus on reliable model tracking, clean API deployment, and modular design — potentially applicable to port equipment where similar degradation patterns occur.
-
 ---
 
 ##  Dataset
@@ -84,6 +82,47 @@ This project uses the following technologies and tools:
 
 ---
 
+##  System Architecture / Pipeline
+
+The end-to-end predictive maintenance pipeline consists of the following stages:
+
+1. **Data Ingestion**  
+   Load and parse the FD001 dataset (train/test/RUL) into structured DataFrames.
+
+2. **Data Preprocessing & Feature Engineering**  
+   - Normalize sensor values  
+   - Create derived features (e.g., cycle count, moving averages, lags)  
+   - Align training and test sets with RUL targets
+
+3. **Model Training**  
+   - Train a baseline **Random Forest** regression model  
+   - Train an **LSTM** model to capture temporal degradation patterns
+
+4. **Experiment Tracking**  
+   - Use **MLflow** to log hyperparameters, model metrics, and artifacts
+
+5. **Model Inference API**  
+   - Build a REST API using **FastAPI**  
+   - Accept input JSON and return predicted RUL for a given machine snapshot
+
+6. **Containerization**  
+   - Package the entire API with **Docker**  
+
+---
+
+###  Pipeline Diagram
+
+```mermaid
+graph TD
+    A[Raw CMAPSS FD001 Data] --> B[Data Preprocessing]
+    B --> C[Feature Engineering]
+    C --> D1[Random Forest Model]
+    C --> D2[LSTM Model]
+    D1 & D2 --> E[MLflow Tracking]
+    D2 --> F[FastAPI Inference Server]
+    F --> G[Docker Container]
+```
+---
 
 
 
